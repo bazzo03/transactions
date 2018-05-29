@@ -1,16 +1,16 @@
 package com.danielbernal.transactions;
 
-import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.runners.Suite;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+import com.danielbernal.transactions.controller.StatisticControllerTest;
+import com.danielbernal.transactions.controller.TransactionControllerTest;
+import com.danielbernal.transactions.service.StatisticServiceImplTest;
+import com.danielbernal.transactions.service.TransactionServiceImplTest;
+import com.danielbernal.transactions.util.DateUtilTest;
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({ TransactionControllerTest.class, StatisticControllerTest.class, StatisticServiceImplTest.class,
+		TransactionServiceImplTest.class, DateUtilTest.class })
 public class TransactionsApplicationTests {
-
-	@Test
-	public void contextLoads() {
-	}
-
 }
